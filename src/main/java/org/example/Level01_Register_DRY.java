@@ -59,7 +59,6 @@ public class Level01_Register_DRY {
         driver.findElement(By.cssSelector("input#Email")).sendKeys(emailAddress);
         driver.findElement(By.cssSelector("input#Password")).sendKeys("123456");
         driver.findElement(By.cssSelector("input#ConfirmPassword")).sendKeys("123456");
-
         driver.findElement(By.cssSelector("button#register-button")).click();
 
         Assert.assertEquals(driver.findElement(By.cssSelector("div.result")).getText(), "Your registration completed");

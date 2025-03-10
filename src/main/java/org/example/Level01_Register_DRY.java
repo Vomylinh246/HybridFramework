@@ -13,13 +13,10 @@ import java.util.concurrent.TimeUnit;
 public class Level01_Register_DRY {
     WebDriver driver;
     String emailAddress;
-    String projectPath = System.getProperty("user.dir");
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
         driver = new FirefoxDriver();
-
         emailAddress = "afc" + generateFakeNumber() + "@mail.vn";
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://demo.nopcommerce.com/");
